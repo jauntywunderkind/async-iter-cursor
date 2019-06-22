@@ -2,7 +2,6 @@
 	"name": "async-iter-cursor",
 	"version": "1.0.0",
 	"description": "Manually advanced cursor & cursor asynchronous iterators",
-	"main": "index.js",
 	"scripts": {
 		"test": "node -r esm .test"
 	},
@@ -15,11 +14,6 @@
 	"license": "MIT",
 	"module": "async-iter-cursor.js",
 	"esm": true,
-	"@std/esm": {
-		"cjs": {
-			"namedExports": true
-		}
-	},
 	"dependencies": {
 		"deferrant": "^1.4.0"
 	},
