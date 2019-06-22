@@ -3,7 +3,6 @@ import tape from "tape"
 import delay from "delay"
 import immediate from "p-immediate"
 
-//import readRolling from "async-iter-read/rolling.js"
 import readFixed from "async-iter-read/fixed.js"
 import Stepper from "../stepper.js"
 
@@ -65,14 +64,14 @@ tape( "can step multiple steps", async function( t){
 
 	// sample end late
 	const
+	  r24= stepper.next(),
 	  r424= stepper.next(),
 	  rNo= stepper.next()
 	step424= true
-	makeTest( r424, 424, ()=> step424=== false, v=> step424= v)
+	makeTest( r424, 424, ()=> step424=== false, v=> step424= v.value)
 
 	await delay( 2)
 	t.equal( step42, 42, "got r42")
-	t.equal( step424, 42, "got r42")
-
+	t.equal( step424, 424, "got r424")
 	t.end()
 })
