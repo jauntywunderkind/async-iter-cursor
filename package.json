@@ -12,6 +12,7 @@
 	"keywords": [],
 	"author": "jauntywunderkind",
 	"license": "MIT",
+	"main": "async-iter-cursor.js",
 	"module": "async-iter-cursor.js",
 	"esm": true,
 	"dependencies": {
